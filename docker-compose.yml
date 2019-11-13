@@ -1,0 +1,13 @@
+version: "2"
+services:
+  cassandra:
+    image: "cassandra"
+    ports:
+      - "7000:7000"
+      - "9042:9042"
+    environment:
+      CASSANDRA_SEEDS: cassandra
+      CASSANDRA_PASSWORD_SEEDER: yes"
+      CASSANDRA_PASSWORD: cassandra
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
